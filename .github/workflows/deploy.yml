@@ -21,6 +21,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Setup MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with:
+          mongodb-version: '5.0'
+
       - name: Use Secret in Environment
         run: echo "MY_SECRET=${{ secrets.ALAA_HEMDAN }}" >> $GITHUB_ENV
 

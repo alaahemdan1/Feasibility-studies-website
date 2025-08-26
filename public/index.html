@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <form action="https://formspree.io/f/xldweoyg" method="POST"  class="contact-form">
+                    <form action="https://formsubmit.co/alaahemdan2021@gmail.com" method="POST"  class="contact-form">
                         <div class="mb-3">
                             <input type="text" name="name" class="form-control" placeholder="الاسم" required>
                             <div class="invalid-feedback">يرجى إدخال الاسم</div>
@@ -172,8 +172,11 @@
                             <textarea name="message" class="form-control" rows="5" placeholder="رسالتك" required></textarea>
                             <div class="invalid-feedback">يرجى إدخال رسالتك</div>
                         </div>
-                        <!-- أضف هذا السطر قبل زر الإرسال -->
+                            <!-- هذا هو السطر الجديد لتحديد صفحة الشكر -->
                             <input type="hidden" name="_next" value="https://feasibility-studies-website.vercel.app/thank-you.html">
+
+                            <!-- هذا السطر لمنع صفحة الـ CAPTCHA المزعجة -->
+    <input type="hidden" name="_captcha" value="false">
                         <button type="submit" class="btn btn-primary w-100">إرسال الرسالة</button>
                     </form>
                 </div>

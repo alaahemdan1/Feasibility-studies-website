@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكراً لتواصلك معنا</title>
+    <!-- يمكنك نسخ نفس روابط الـ CSS من ملف index.html لتوحيد الشكل -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تصميم بسيط للصفحة */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .thank-you-container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1 );
+        }
+        .thank-you-container h1 {
+            color: var(--primary-color, #0d6efd); /* استخدم نفس اللون الأساسي لموقعك */
+            margin-bottom: 20px;
+        }
+        .thank-you-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn-home {
+            background-color: var(--secondary-color, #6c757d); /* استخدم نفس اللون الثانوي لموقعك */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>شكراً لك!</h1>
+        <p>لقد تم استلام رسالتك بنجاح. سنقوم بالرد عليك في أقرب وقت ممكن.</p>
+        <a href="index.html" class="btn btn-primary">العودة إلى الصفحة الرئيسية</a>
+    </div>
+</body>
+</html>

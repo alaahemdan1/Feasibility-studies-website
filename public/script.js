@@ -24,6 +24,12 @@ window.addEventListener('scroll', () => {
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
+    // Reset all error states
+    const formInputs = e.target.querySelectorAll('input, textarea');
+    formInputs.forEach(input => {
+        input.classList.remove('is-invalid');
+    });
+    
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     
@@ -42,7 +48,21 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
             alert('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.');
             e.target.reset();
         } else {
-            alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+            if (result.errors) {
+                // Show specific validation errors
+                Object.entries(result.errors).forEach(([field, message]) => {
+                    const input = e.target.querySelector(`[name="${field}"]`);
+                    if (input) {
+                        input.classList.add('is-invalid');
+                        const feedback = input.nextElementSibling;
+                        if (feedback && feedback.classList.contains('invalid-feedback')) {
+                            feedback.textContent = message;
+                        }
+                    }
+                });
+            } else {
+                alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+            }
         }
     } catch (error) {
         alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');

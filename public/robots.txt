@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Point search engines to the sitemap
+Sitemap: https://feasibility-studies-website.vercel.app/sitemap.xml

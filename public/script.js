@@ -20,54 +20,62 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Reset all error states
-    const formInputs = e.target.querySelectorAll('input, textarea');
-    formInputs.forEach(input => {
-        input.classList.remove('is-invalid');
-    });
-    
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    
-    try {
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
+// ======================= START: CODE MODIFICATION =======================
+// تم تعديل هذا الجزء بالكامل ليحل مشكلة الخطأ
+const contactForm = document.getElementById('contactForm');
+
+// سيتم تنفيذ هذا الكود فقط إذا تم العثور على النموذج
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Reset all error states
+        const formInputs = e.target.querySelectorAll('input, textarea');
+        formInputs.forEach(input => {
+            input.classList.remove('is-invalid');
         });
         
-        const result = await response.json();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
         
-        if (result.success) {
-            alert('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.');
-            e.target.reset();
-        } else {
-            if (result.errors) {
-                // Show specific validation errors
-                Object.entries(result.errors).forEach(([field, message]) => {
-                    const input = e.target.querySelector(`[name="${field}"]`);
-                    if (input) {
-                        input.classList.add('is-invalid');
-                        const feedback = input.nextElementSibling;
-                        if (feedback && feedback.classList.contains('invalid-feedback')) {
-                            feedback.textContent = message;
-                        }
-                    }
-                });
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                alert('تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.');
+                e.target.reset();
             } else {
-                alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+                if (result.errors) {
+                    // Show specific validation errors
+                    Object.entries(result.errors).forEach(([field, message]) => {
+                        const input = e.target.querySelector(`[name="${field}"]`);
+                        if (input) {
+                            input.classList.add('is-invalid');
+                            const feedback = input.nextElementSibling;
+                            if (feedback && feedback.classList.contains('invalid-feedback')) {
+                                feedback.textContent = message;
+                            }
+                        }
+                    });
+                } else {
+                    alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+                }
             }
+        } catch (error) {
+            alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
         }
-    } catch (error) {
-        alert('عذراً، حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
-    }
-});
+    });
+}
+// ======================== END: CODE MODIFICATION ========================
+
 
 // Intersection Observer for scroll animations
 const animateOnScroll = () => {
@@ -129,19 +137,22 @@ document.querySelectorAll('.service-card').forEach((card, index) => {
 // Back to top button functionality
 const backToTopButton = document.getElementById('back-to-top');
 
-// Show button when scrolling down 200px
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-});
-
-// Smooth scroll to top when clicking the button
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+// هذا الكود قد يسبب خطأ أيضاً إذا لم يكن الزر موجوداً، لذلك سنضيف تحققاً
+if (backToTopButton) {
+    // Show button when scrolling down 200px
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
     });
-});
+
+    // Smooth scroll to top when clicking the button
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}

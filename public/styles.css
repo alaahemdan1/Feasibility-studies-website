@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -26,6 +27,9 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     direction: rtl;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar Styles */
@@ -69,6 +73,12 @@ body {
     color: var(--secondary-color) !important;
 }
 
+/* (اختياري) أضف هذا الكود لتحسين شكل الهيدر عند التمرير */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(44, 82, 130, 0.95), rgba(26, 54, 93, 0.95)),
@@ -79,7 +89,7 @@ body {
     display: flex;
     align-items: center;
     color: var(--white);
-    margin-top: 60px;
+    margin-top: 2px;
     position: relative;
 }
 
@@ -96,6 +106,12 @@ body {
 .hero-content {
     text-align: center;
     padding: 2rem;
+}
+
+
+/* 3. اجعل المحتوى الرئيسي ينمو ليدفع الفوتر للأسفل */
+main {
+    flex-grow: 1;
 }
 
 .main-title {
@@ -464,6 +480,7 @@ footer {
     color: var(--white);
     padding: 1.5rem 0;
     border-top: 3px solid var(--secondary-color);
+    flex-shrink: 0;
 }
 
 footer .container {

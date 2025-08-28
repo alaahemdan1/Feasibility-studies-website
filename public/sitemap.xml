@@ -18,6 +18,13 @@
 
   <!-- المقال الرابع (الأحدث ) -->
   <url>
+    <loc>https://feasibility-studies-website.vercel.app/article5.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- المقال الرابع (الأحدث ) -->
+  <url>
     <loc>https://feasibility-studies-website.vercel.app/article4.html</loc>
     <lastmod>2025-08-28</lastmod>
     <priority>0.80</priority>

@@ -1,8 +1,47 @@
+<!-- public/sitemap.xml (الكود الجديد والمحدث ) -->
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
   <url>
-    <loc>https://feasibility-studies-website.vercel.app/</loc>
-    <lastmod>2025-08-26</lastmod>
+    <loc>https://feasibility-studies-website.vercel.app/index.html</loc>
+    <lastmod>2025-08-28</lastmod>
     <priority>1.00</priority>
   </url>
+
+  <!-- صفحة المدونة -->
+  <url>
+    <loc>https://feasibility-studies-website.vercel.app/blog.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- المقال الرابع (الأحدث ) -->
+  <url>
+    <loc>https://feasibility-studies-website.vercel.app/article4.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- المقال الثالث -->
+  <url>
+    <loc>https://feasibility-studies-website.vercel.app/article3.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- المقال الثاني -->
+  <url>
+    <loc>https://feasibility-studies-website.vercel.app/article2.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- المقال الأول -->
+  <url>
+    <loc>https://feasibility-studies-website.vercel.app/article1.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 </urlset>

@@ -616,3 +616,36 @@ footer p {
         height: 150px;
     }
 }
+
+/* --- إصلاح محاذاة زر "اقرأ المزيد" في المدونة --- */
+.blog-card .btn {
+    margin-top: auto;
+}
+
+
+/* ==================
+   Call to Action (CTA) Button - زر طلب الخدمة
+   ================== */
+
+.cta-button-article {
+    display: inline-block;
+    background-color: var(--primary-color); /* اللون الأزرق الأساسي */
+    color: var(--white);
+    padding: 15px 30px;
+    font-size: 1.2rem; /* حجم خط أكبر قليلاً */
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px; /* مسافة علوية */
+    margin-bottom: 20px; /* مسافة سفلية */
+    border: 2px solid transparent;
+}
+
+.cta-button-article:hover {
+    background-color: var(--secondary-color); /* تغيير اللون عند المرور */
+    color: var(--primary-color);
+    transform: translateY(-3px); /* تأثير حركة بسيط للأعلى */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}

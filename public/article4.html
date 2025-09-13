@@ -56,31 +56,107 @@
                                 <i class="fas fa-list-alt me-2"></i> عرض الأنشطة المستهدفة
                             </button>
                         </div>
+<!-- بداية نموذج طلب دراسة الجدوى -->
+<form action="https://formsubmit.co/your-email@example.com" method="POST">
+<div class="card shadow-sm mb-5">
+ <div class="card-header bg-primary text-white text-center">
+    <h3 class="mb-0">املأ بياناتك الآن لتجهيز ملف التقديم</h3>
+ </div>
+ <div class="card-body">
+    <!-- حقل اسم مقدم الطلب -->
+    <div class="mb-3">
+        <label for="requester-name" class="form-label">اسم مقدم الطلب</label>
+        <input type="text" id="requester-name" name="اسم_مقدم_الطلب" class="form-control" required>
+    </div>
 
-                        <!-- نموذج التقديم الإلكتروني -->
-                        <div class="card shadow-sm mb-5">
-                             <div class="card-header bg-primary text-white text-center">
-                                <h3 class="mb-0">املأ بياناتك الآن لتجهيز ملف التقديم</h3>
-                            </div>
-                            <div class="card-body p-4">
-                                <p class="text-center mb-4">يقوم **مكتب الرؤية الاقتصادية** باستلام طلبك وتجهيز كافة المستندات ودراسة الجدوى المطلوبة لتقديم ملف متكامل لهيئة التنمية الصناعية.</p>
-                                <form action="https://formsubmit.co/alaahemdan2021@gmail.com" method="POST">
-                                    <input type="hidden" name="_subject" value="طلب جديد لتجهيز ملف أرض صناعية!">
-                                    <input type="hidden" name="_template" value="table">
-                                    <input type="hidden" name="_next" value="https://feasibility-studies-website.vercel.app/thank-you.html">
-                                    <input type="hidden" name="_captcha" value="false">
-                                    <div class="row g-3">
-                                        <div class="col-md-6"><label for="companyName" class="form-label">اسم الشركة:</label><input type="text" class="form-control" id="companyName" name="اسم الشركة" required></div>
-                                        <div class="col-md-6"><label for="contactPerson" class="form-label">اسم مقدم الطلب:</label><input type="text" class="form-control" id="contactPerson" name="اسم مقدم الطلب" required></div>
-                                        <div class="col-md-6"><label for="contactPhone" class="form-label">رقم الهاتف (واتساب ):</label><input type="tel" class="form-control" id="contactPhone" name="رقم الهاتف" required></div>
-                                        <div class="col-12"><label for="selectedActivity" class="form-label">النشاط الصناعي المطلوب:</label><input type="text" class="form-control" id="selectedActivity" name="النشاط المطلوب" placeholder="مثال: صنع أدوات مائدة من زجاج كريستال" required></div>
-                                        <div class="col-12"><label for="notes" class="form-label">ملاحظات إضافية:</label><textarea class="form-control" id="notes" name="ملاحظات" rows="3"></textarea></div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100 mt-4">إرسال الطلب وتجهيز الملف</button>
-                                </form>
-                            </div>
-                        </div>
-                       
+    <!-- حقل اسم الشركة -->
+    <div class="mb-3">
+        <label for="company-name" class="form-label">اسم الشركة</label>
+        <input type="text" id="company-name" name="اسم_الشركة" class="form-control" required>
+    </div>
+
+    <!-- حقل النشاط المطلوب -->
+    <div class="mb-3">
+        <label for="target-activity" class="form-label">النشاط المطلوب</label>
+        <input type="text" id="target-activity" name="النشاط_المطلوب" class="form-control" required>
+    </div>
+
+    <!-- حقل المساحة المطلوبة -->
+    <div class="mb-3">
+        <label for="required-area" class="form-label">المساحة المطلوبة (متر مربع)</label>
+        <input type="number" id="required-area" name="المساحة_المطلوبة" class="form-control" placeholder="مثال: 1000" required>
+    </div>
+
+    <!-- حقل رقم الهاتف -->
+    <div class="mb-3">
+        <label for="requester-phone" class="form-label">رقم الهاتف (واتساب)</label>
+        <input type="tel" id="requester-phone" name="رقم_الهاتف" class="form-control" placeholder="مثال: 01012345678" required>
+    </div>
+
+    <!-- حقل اختيار المدينة -->
+    <div class="mb-3">
+        <label for="requester-city" class="form-label">اختر المدينة المستهدفة</label>
+        <select id="requester-city" name="المدينة_المستهدفة" class="form-select" required>
+            <option value="" disabled selected>-- يرجى اختيار مدينة --</option>
+            <option value="أكتوبر الجديدة">أكتوبر الجديدة (الجيزة)</option>
+            <option value="السويس الجديدة">السويس الجديدة (السويس)</option>
+            <option value="الفيوم الجديدة">الفيوم الجديدة (الفيوم)</option>
+            <option value="كوم اوشيم">كوم اوشيم (الفيوم)</option>
+            <option value="برج العرب الجديدة">برج العرب الجديدة (الإسكندرية)</option>
+            <option value="السادات">السادات (المنوفية)</option>
+            <option value="حوش عيسى">حوش عيسى (البحيرة)</option>
+            <option value="وادي النطرون">وادي النطرون (البحيرة)</option>
+            <option value="العلمين الجديدة">العلمين الجديدة (مرسى مطروح)</option>
+            <option value="القنطرة شرق">القنطرة شرق (الإسماعيلية)</option>
+            <option value="بئر العبد">بئر العبد (شمال سيناء)</option>
+            <option value="دشلوط">دشلوط (أسيوط)</option>
+            <option value="أسيوط الجديدة">أسيوط الجديدة (أسيوط)</option>
+            <option value="أخميم الجديدة">أخميم الجديدة (سوهاج)</option>
+            <option value="سوهاج الجديدة">سوهاج الجديدة (سوهاج)</option>
+            <option value="الأحايوة شرق">الأحايوة شرق (سوهاج)</option>
+            <option value="الكوثر">الكوثر (سوهاج)</option>
+            <option value="غرب جرجا">غرب جرجا (سوهاج)</option>
+            <option value="غرب طهطا">غرب طهطا (سوهاج)</option>
+            <option value="نجع حمادي">نجع حمادي (قنا)</option>
+            <option value="قفط">قفط (قنا)</option>
+            <option value="البغدادي">البغدادي (الأقصر)</option>
+            <option value="طيبة الجديدة">طيبة الجديدة (الأقصر)</option>
+            <option value="توشكى الجديدة">توشكى الجديدة (أسوان)</option>
+            <option value="العلاقي">العلاقي (أسوان)</option>
+            <option value="كوم امبو">كوم امبو (أسوان)</option>
+            <option value="المحلة الكبرى">المحلة الكبرى (الغربية)</option>
+            <option value="مطوبس">مطوبس (كفر الشيخ)</option>
+            <option value="جنوب الرسوة">جنوب الرسوة (بورسعيد)</option>
+            <option value="المطاهرة">المطاهرة (المنيا)</option>
+            <option value="الداخلة">الداخلة (الوادي الجديد)</option>
+            <option value="العاشر من رمضان">العاشر من رمضان (الشرقية)</option>
+            <option value="بني سويف الجديدة">بني سويف الجديدة (بني سويف)</option>
+            <option value="جمصة">جمصة (الدقهلية)</option>
+            <option value="العبور">العبور (القليوبية)</option>
+        </select>
+    </div>
+
+    <!-- حقل الرسالة (اختياري) -->
+    <div class="mb-3">
+        <label for="requester-message" class="form-label">ملاحظات إضافية (اختياري)</label>
+        <textarea id="requester-message" name="ملاحظات" class="form-control" rows="3" placeholder="اكتب أي تفاصيل إضافية هنا..."></textarea>
+    </div>
+
+    <!-- إعدادات formsubmit.co المخفية -->
+    <input type="hidden" name="_next" value="https://feasibility-studies-website.vercel.app/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="طلب دراسة جدوى جديد (طرح الأراضي الصناعية )">
+
+    <!-- زر الإرسال -->
+    <button type="submit" class="btn btn-primary w-100 fw-bold">إرسال الطلب لتجهيز الملف</button>
+ </div>
+</div>
+</form>
+<!-- نهاية نموذج طلب دراسة الجدوى -->
+
+
+
                        <hr class="my-5">
                         <a href="blog.html" class="btn btn-secondary"><i class="fas fa-arrow-right me-2"></i>العودة إلى المدونة</a>
                     </div>

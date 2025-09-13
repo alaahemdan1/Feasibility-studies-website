@@ -22,10 +22,10 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- المقال الرابع (الأحدث ) -->
+ <!-- المقال الرابع -->
   <url>
     <loc>https://feasibility-studies-website.vercel.app/article4.html</loc>
-    <lastmod>2025-08-28</lastmod>
+    <lastmod>2025-08-31</lastmod> <!-- تم التحديث إلى تاريخ اليوم -->
     <priority>0.80</priority>
   </url>
   

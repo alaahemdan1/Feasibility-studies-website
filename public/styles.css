@@ -649,3 +649,83 @@ footer p {
     transform: translateY(-3px); /* تأثير حركة بسيط للأعلى */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
+
+
+/* --- تنسيقات إضافية لصفحة المقال المحسنة --- */
+
+/* صندوق المعلومات */
+.info-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-box i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.info-box h5 {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+/* تنسيق الأكورديون (الأنشطة المستهدفة) */
+.accordion-button {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.accordion-button i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) i {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    background-color: #f8f9fa;
+}
+
+/* --- تنسيقات جدول الأنشطة ونموذج التقديم --- */
+#activitiesTableBody tr:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+.card-header h3 {
+    font-weight: 600;
+}
+
+/* --- تنسيقات النوافذ المنبثقة (Modals) --- */
+.modal-dialog {
+    max-width: 90%; /* يمكنك تعديل هذه القيمة حسب رغبتك */
+}
+
+.modal-content {
+    height: 90vh; /* ارتفاع النافذة المنبثقة */
+}
+
+.modal-body {
+    overflow-y: hidden; /* لمنع ظهور شريط تمرير مزدوج */
+}

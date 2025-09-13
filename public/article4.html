@@ -57,10 +57,12 @@
                             </button>
                         </div>
 <!-- بداية نموذج طلب دراسة الجدوى -->
-<div class="card shadow-sm mb-5">
+<form id="feasibility-request-form" action="https://formsubmit.co/alaahemdan2021@gmail.com" method="POST" class="contact-form p-4 border rounded-3 bg-light">
+    <div class="card shadow-sm mb-5">
  <div class="card-header bg-primary text-white text-center">
-<h3 class="mb-0">املأ بياناتك الآن لتجهيز ملف التقديم</h3>
-</div>
+    <h3 class="mb-0">املأ بياناتك الآن لتجهيز ملف التقديم</h3>
+ </div>
+    
     <!-- حقل اسم مقدم الطلب -->
     <div class="mb-3">
         <label for="requester-name" class="form-label">اسم مقدم الطلب</label>
@@ -70,11 +72,11 @@
     <!-- ======== بداية: الحقول الجديدة ======== -->
     <!-- حقل اسم الشركة -->
     <div class="mb-3">
-        <label for="company-name" class="form-label">اسم الشركة </label>
-        <input type="text" id="company-name" name="اسم_الشركة" class="form-control"  required>
+        <label for="company-name" class="form-label">اسم الشركة</label>
+        <input type="text" id="company-name" name="اسم_الشركة" class="form-control"   required>
     </div>
 
-    <!-- حقل النشاط المستهدف -->
+    <!-- حقل النشاط المطلوب -->
     <div class="mb-3">
         <label for="target-activity" class="form-label">النشاط المطلوب</label>
         <input type="text" id="target-activity" name="النشاط المطلوب" class="form-control"  required>
@@ -83,14 +85,14 @@
     <!-- حقل المساحة المطلوبة -->
     <div class="mb-3">
         <label for="required-area" class="form-label">المساحة المطلوبة (متر مربع)</label>
-        <input type="number" id="required-area" name="المساحة_المطلوبة" class="form-control" placeholder="مثال: 1000" required>
+        <input type="number" id="required-area" name="المساحة_المطلوبة" class="form-control" required>
     </div>
     <!-- ======== نهاية: الحقول الجديدة ======== -->
     
     <!-- حقل رقم الهاتف -->
     <div class="mb-3">
         <label for="requester-phone" class="form-label">رقم الهاتف (واتساب)</label>
-        <input type="tel" id="requester-phone" name="رقم_الهاتف" class="form-control" placeholder="مثال: 01012345678" required>
+        <input type="tel" id="requester-phone" name="رقم_الهاتف" class="form-control"  required>
     </div>
 
     <!-- حقل اختيار المدينة -->
@@ -149,8 +151,7 @@
     <input type="hidden" name="_subject" value="طلب دراسة جدوى جديد (طرح الأراضي الصناعية )">
 
     <!-- زر الإرسال -->
-    <!-- زر الإرسال المعدل -->
-<button type="submit" class="btn btn-primary w-100 fw-bold">إرسال الطلب لتجهيز الملف</button>
+    <button type="submit" class="btn btn-primary w-100 fw-bold">إرسال الطلب الآن</button>
 </form>
 <!-- نهاية نموذج طلب دراسة الجدوى -->
 

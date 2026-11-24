@@ -11,10 +11,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        # تم التحديث إلى v4 لحل التحذير الخاص بـ Node.js 20
+        uses: actions/checkout@v4 
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        # تم التحديث إلى v4 لحل التحذير الخاص بـ Node.js 20
+        uses: actions/setup-node@v4 
         with:
           node-version: 18
 
@@ -29,5 +31,7 @@ jobs:
       - name: Use Secret in Environment
         run: echo "MY_SECRET=${{ secrets.ALAA_HEMDAN }}" >> $GITHUB_ENV
 
-      - name: Run Your Script
-        run: node server.js
+      # تم إزالة خطوة node server.js لأنها سبب التعليق الرئيسي
+      # إذا كان مشروعك يحتاج إلى بناء (Build) قبل النشر، استخدم الأمر التالي:
+      # - name: Build Project
+      #   run: npm run build

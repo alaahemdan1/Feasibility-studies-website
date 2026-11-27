@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://feasibility-studies-website.vercel.app/sitemap.xml
